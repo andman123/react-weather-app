@@ -1,23 +1,23 @@
 import React from "react";
-import {useMemo} from "react";
+import { useMemo } from "react";
 import "./form.style.css";
 
 const Form = props => {
 
 
-  const error = useMemo(()=>props => {
+  const error = (message) => {
     return (
-        <div className="alert alert-danger mx-5" role="alert">
-          Please Enter City...!
-        </div>
+      <div className="alert alert-danger mx-5" role="alert">
+        {message}
+      </div>
     );
-  },[]);
+  };
 
 
   return (
     <div className="container h-100">
       <form onSubmit={props.loadWeather}>
-        <div>{props.error ? error() : ""}</div>
+        <div>{props.error.error ? error(props.error.message) : ""}</div>
         <div className="row">
           <div className="col-md-3 offset-md-2">
             <input
