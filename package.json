@@ -8,7 +8,7 @@
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "REACT_APP_API_KEY=338ce55b241a871b7fe430e6fd5ff5c5 react-scripts start",
